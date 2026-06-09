@@ -1,5 +1,5 @@
 # 1. On prend une image Node.js stable
-FROM node:18-alpine
+FROM node:24-alpine
 
 # 2. On crée le dossier de l'application dans le conteneur
 WORKDIR /usr/src/app
@@ -14,7 +14,7 @@ RUN npm install --production
 COPY . .
 
 # 6. On expose le port utilisé par ton serveur (ex: 5000 ou celui de ton app)
-EXPOSE 5000
+EXPOSE 8000
 
 # 7. La commande pour lancer ton serveur backend
 CMD ["npm", "start"]
