@@ -42,7 +42,7 @@ const supTache = asyncHandler( async(req, res) => {
     
     const tache = await Tache.findById(req.params.id)
      if (!tache) {
-    res.status(400)
+    res.status(400) 
     throw new Error('Task not found')
 }
     const user = await User.findById(req.user.id)
@@ -61,3 +61,6 @@ const supTache = asyncHandler( async(req, res) => {
 })
 
 module.exports = { recupTache , createTache , updateTache , supTache }
+
+
+// mongodb+srv://elouvaekpao_db_user:elou1919blend@cluster0.efb1odm.mongodb.net/

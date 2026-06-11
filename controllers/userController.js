@@ -46,7 +46,6 @@ const loginUser = asyncHandler(async (req, res) => {
             res.status(400)
             throw new Error('Données invalides') 
     }
- 
  })
 
 
